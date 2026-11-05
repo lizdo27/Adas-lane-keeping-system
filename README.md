@@ -1,24 +1,35 @@
-# Adas-lane-keeping-system
-Hệ thống ADAS hỗ trợ giữ làn đường kết hợp mô phỏng Gazebo và xe tự hành thực tế
+# ADAS Lane Keeping System
 
-## Mô phỏng ADAS
+Dự án ADAS hỗ trợ giữ làn cho xe thật, hướng tới Raspberry Pi 5 8GB, webcam và ESP32.
+Người lái điều khiển ga, phanh và chọn hướng; hệ thống hỗ trợ góc lái.
 
-Mã mô phỏng ADAS hỗ trợ giữ làn bằng OpenCV, chạy trên ROS 2 Jazzy và Gazebo Harmonic, nằm trong [`simulation/`](simulation/README.md).
+## Hướng phát triển
 
-Xem [hướng dẫn cài đặt, build và chạy](simulation/README.md) để khởi động mô phỏng và giao diện điều khiển. Thực hiện build trong `simulation/`.
+- AI segmentation kết hợp OpenCV để nhận diện vạch và xác định hai biên làn.
+- Raspberry Pi xử lý ảnh và tính hỗ trợ lái; ESP32 thực hiện lệnh điều khiển.
+- ROS 2 kết nối các phần, hướng tới kết hợp ý định người lái và xi nhan.
 
-Không kèm trọng số AI (`best.pt`, `*.pt`), dataset hoặc dữ liệu huấn luyện. Chế độ mặc định `geometry` không cần trọng số AI.
+Đây là hướng thiết kế cho xe thật; chưa phải các tính năng đã hoàn thiện hoặc được kiểm chứng trên phần cứng.
 
-Nguồn mô phỏng và giấy phép được ghi trong [README mô phỏng](simulation/README.md#nguồn-gốc) và [LICENSE](simulation/LICENSE).
+## Cấu trúc
 
-## Ảnh và video demo
+| Thư mục | Nội dung |
+|---|---|
+| `src/` | Mã nguồn xe thật, sẽ bổ sung |
+| `hardware/` | Sơ đồ đấu nối, linh kiện và cấu hình phần cứng |
+| `models/` | Trọng số AI và thông tin phiên bản |
+| `data/` | Dữ liệu thực tế và hướng dẫn dataset |
+| `media/` | Ảnh, video thử nghiệm xe thật |
+| `simulation/` | Toàn bộ mã, cấu hình, tài liệu và media mô phỏng Gazebo |
 
-![Camera Gazebo](media/images/gazebo-camera.png)
+## Model và media xe thật
 
-Ảnh camera gốc trong mô phỏng, chưa phủ kết quả nhận diện.
-Xem [thư viện media](media/README.md) và [danh sách video](media/videos/README.md).
+Đặt model tại `models/best.pt`; xem [hướng dẫn model](models/README.md).
+Xem [media xe thật](media/README.md) để bổ sung ảnh/video thực tế.
+Chưa kèm trọng số hoặc dataset trong repo.
 
-## Model AI sau này
+## Thử nghiệm mô phỏng
 
-Đặt trọng số tại `models/best.pt`. Xem [hướng dẫn model và lệnh chạy](models/README.md).
-Chế độ OpenCV hiện tại không cần file này; model và dữ liệu huấn luyện chưa được tải lên repo.
+Gazebo là môi trường thử nghiệm hỗ trợ quá trình phát triển. Mã và hướng dẫn nằm riêng trong [simulation/](simulation/README.md).
+Bản mô phỏng hiện có ADAS geometry bằng OpenCV; không đồng nghĩa bản AI + OpenCV trên xe thật đã hoàn thiện.
+Nguồn mô phỏng và giấy phép được giữ trong thư mục đó.

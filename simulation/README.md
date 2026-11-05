@@ -61,3 +61,7 @@ Giữ LICENSE, copyright và thông tin package gốc. Phần bổ sung chính n
 `EXPORT_MANIFEST.json` ghi danh sách file sao chép và SHA256 để đối chiếu.
 
 Bản mô phỏng được tích hợp trong `simulation/` của repo ADAS; chạy các lệnh ROS 2 và ADAS từ thư mục này. Manifest ghi hash tại thời điểm xuất, trước khi điều chỉnh README cho vị trí tích hợp.
+
+## Media và model thử nghiệm
+
+Xem [ảnh và video mô phỏng](media/README.md) và [hướng dẫn thử model trong Gazebo](docs/MODEL_TEST.md).
