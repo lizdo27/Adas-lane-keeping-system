@@ -65,3 +65,9 @@ Bản mô phỏng được tích hợp trong `simulation/` của repo ADAS; ch�
 ## Media và model thử nghiệm
 
 Xem [ảnh và video mô phỏng](media/README.md) và [hướng dẫn thử model trong Gazebo](docs/MODEL_TEST.md).
+
+## Video demo
+
+[Xem video ADAS Gazebo](media/videos/adas_sim.mp4) · [Hai ảnh trích từ video](media/README.md)
+
+![ADAS hỗ trợ lái trong Gazebo](media/images/adas-sim-2.jpg)

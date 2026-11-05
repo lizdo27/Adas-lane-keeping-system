@@ -1,9 +1,17 @@
-# Media mô phỏng
+# Demo ADAS trong Gazebo
 
-![Camera Gazebo](images/gazebo-camera.png)
+[Xem hoặc tải video đầy đủ — adas_sim.mp4](videos/adas_sim.mp4)
 
-Ảnh camera gốc từ clip Gazebo ngày 31/10/2026, chưa phủ kết quả nhận diện.
-Đây không phải dữ liệu xe thật hoặc bằng chứng chất lượng giữ làn.
+Video quay màn hình dài khoảng 4 phút 55 giây, ngày 05/11/2026. Minh họa giao diện ADAS hình học/OpenCV trong Gazebo; không phải thử nghiệm xe thật.
 
-Ảnh demo mô phỏng đặt trong `images/`. Link video mô phỏng đặt trong [videos/README.md](videos/README.md).
-Clip ghi bằng R/T trong giao diện nằm cục bộ ở `simulation/basic_autonomy/predictions/adas/clips/` (tính từ gốc repo).
+## Theo dõi làn — khoảng 01:37
+
+![Theo dõi làn trong Gazebo](images/adas-sim-1.jpg)
+
+## Hỗ trợ lái — khoảng 03:14
+
+![Hỗ trợ lái trong Gazebo](images/adas-sim-2.jpg)
+
+Ảnh trích trực tiếp từ video, giữ nguyên giao diện và thông số. Trong các khung này, lệnh ga hiển thị 0.07 (không phải m/s). Ảnh minh họa trạng thái giao diện, không thay thế đánh giá định lượng thuật toán.
+
+[Thông tin video](videos/README.md). Clip ghi mới từ giao diện vẫn được lưu cục bộ trong `simulation/basic_autonomy/predictions/adas/clips/`.

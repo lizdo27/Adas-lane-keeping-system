@@ -16,3 +16,6 @@ datasets/
 *.zip
 *.mp4
 *.avi
+
+# Selected simulation demo only
+!media/videos/adas_sim.mp4
