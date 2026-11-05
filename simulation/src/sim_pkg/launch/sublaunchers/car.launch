@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+  <launch>
+ 
+    <node
+      name = "automobile"
+      pkg = "ros_gz_sim"
+      exec = "create"
+      args = "-file $(find-pkg-share models_pkg)/rcCar_assembly/model.sdf -name automobile -x 8.45 -y -12.97 -z 0.032939 -Y 0.0"/>
+ 
+  </launch>

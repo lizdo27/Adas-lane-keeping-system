@@ -1,0 +1,154 @@
+<?xml version='1.0'?>
+
+<sdf version='1.9'>
+  <model name='camera'>
+    <link name='link_camera'>
+      <inertial>
+        <mass>0.0052875</mass>
+        <inertia>
+          <ixx>4.1e-07</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>7.9e-07</iyy>
+          <iyz>0</iyz>
+          <izz>4.1e-07</izz>
+        </inertia>
+        <pose>0 0 0 0 0 0</pose>
+      </inertial>
+      <pose>0 0 0 0 0 0</pose>
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+
+      <visual name='visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.005 0.095 0.03</size></box>
+        </geometry>
+        <material>
+          <ambient>0.3 0.3 0.3 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+          <specular>0.01 0.01 0.01 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+
+      <collision name='collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box><size>0.005 0.095 0.03</size></box>
+        </geometry>
+      </collision>
+
+      <!-- ===== RGB Camera originale (backward compatibility) ===== -->
+      <sensor type="camera" name="camera1">
+        <always_on>1</always_on>
+        <update_rate>30.0</update_rate>
+        <camera name="head">
+          <horizontal_fov>1.085594795</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip><near>0.02</near><far>100</far></clip>
+          <noise><type>gaussian</type><mean>0.0</mean><stddev>0.0</stddev></noise>
+        </camera>
+        <topic>/automobile/image_raw</topic>
+      </sensor>
+
+      <!-- ===== OAK-D RGB Camera (centro) ===== -->
+      <sensor type="camera" name="oak_rgb">
+        <always_on>1</always_on>
+        <update_rate>30.0</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+        <camera name="oak_rgb">
+          <horizontal_fov>1.085594795</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip><near>0.02</near><far>100</far></clip>
+          <noise><type>gaussian</type><mean>0.0</mean><stddev>0.0</stddev></noise>
+        </camera>
+        <topic>/oak/rgb/image_raw</topic>
+      </sensor>
+
+      <!-- ===== OAK-D Depth Camera ===== -->
+      <sensor type="depth_camera" name="oak_depth">
+        <always_on>1</always_on>
+        <update_rate>30.0</update_rate>
+        <pose>0 0 0 0 0 0</pose>
+        <camera name="oak_depth">
+          <horizontal_fov>1.085594795</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R_FLOAT32</format>
+          </image>
+          <clip><near>0.1</near><far>10.0</far></clip>
+          <noise><type>gaussian</type><mean>0.0</mean><stddev>0.005</stddev></noise>
+        </camera>
+        <topic>/oak/stereo/image_raw</topic>
+      </sensor>
+
+      <!-- ===== OAK-D Mono LEFT (offset -3.75cm su Y) ===== -->
+      <sensor type="camera" name="oak_left">
+        <always_on>1</always_on>
+        <update_rate>30.0</update_rate>
+        <pose>0 0.0375 0 0 0 0</pose>
+        <camera name="oak_left">
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>400</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip><near>0.02</near><far>100</far></clip>
+          <noise><type>gaussian</type><mean>0.0</mean><stddev>0.007</stddev></noise>
+        </camera>
+        <topic>/oak/left/image_raw</topic>
+      </sensor>
+
+      <!-- ===== OAK-D Mono RIGHT (offset +3.75cm su Y) ===== -->
+      <sensor type="camera" name="oak_right">
+        <always_on>1</always_on>
+        <update_rate>30.0</update_rate>
+        <pose>0 -0.0375 0 0 0 0</pose>
+        <camera name="oak_right">
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>400</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip><near>0.02</near><far>100</far></clip>
+          <noise><type>gaussian</type><mean>0.0</mean><stddev>0.007</stddev></noise>
+        </camera>
+        <topic>/oak/right/image_raw</topic>
+      </sensor>
+
+      <!-- ===== OAK-D Built-in IMU (BNO085: accel + gyro + orientation) ===== -->
+      <sensor name="oak_imu" type="imu">
+        <always_on>1</always_on>
+        <update_rate>100</update_rate>
+        <topic>/oak/imu/data</topic>
+        <imu>
+          <angular_velocity>
+            <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
+            <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
+            <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x><noise type="gaussian"><mean>0.0</mean><stddev>0.03</stddev></noise></x>
+            <y><noise type="gaussian"><mean>0.0</mean><stddev>0.03</stddev></noise></y>
+            <z><noise type="gaussian"><mean>0.0</mean><stddev>0.03</stddev></noise></z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<package format="2">
+
+  <name>gps_plugin</name>
+  <version>0.0.0</version>
+  <description>The gps_plugin package</description>
+  <maintainer email="rares.lemnariu@ro.bosch.com"> Rares Lemnariu </maintainer>
+  <license>Bosch ECC</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <build_depend>rclcpp</build_depend>
+  <build_depend>gz-sim8</build_depend>
+  <build_depend>gz-plugin2</build_depend>
+  <build_depend>gz-math7</build_depend>
+  <build_depend>utils</build_depend>
+  
+  <build_export_depend>rclcpp</build_export_depend>
+  
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>gz-sim8</exec_depend>
+  <exec_depend>gz-plugin2</exec_depend>
+  <exec_depend>gz-math7</exec_depend>
+  <exec_depend>utils</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+  
+</package>

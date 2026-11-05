@@ -218,3 +218,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+build/
+install/
+log/
+.venv/
+.runtime/
+__pycache__/
+*.pyc
+*.pt
+*.onnx
+*.engine
+predictions/
+datasets/
+.env
+.env.*
+.aws/
+*.zip
+*.mp4
+*.avi
+
+dataset/

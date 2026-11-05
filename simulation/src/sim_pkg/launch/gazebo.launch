@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Main Gazebo Simulator Launch File
+  
+  This launch file starts the Gazebo Sim (Harmonic) simulator with the BFMC
+  world and all required custom plugins. It configures environment variables
+  for plugin and model discovery.
+  
+  Arguments:
+    gui (default: true) - Launch with GUI. Set to false for headless mode.
+  
+  Environment Variables:
+    GZ_SIM_SYSTEM_PLUGIN_PATH - Paths to custom Gazebo plugins (car, IMU, GPS, etc.)
+    GZ_SIM_RESOURCE_PATH - Path to custom model definitions
+  
+  World: world_with_separators.world (includes track, signs, and traffic lights)
+  
+  Usage:
+    With GUI:    ros2 launch sim_pkg gazebo.launch
+    Headless:    ros2 launch sim_pkg gazebo.launch gui:=false
+-->
+<launch>
+  <arg name="gui" default="true" />
+
+  <!-- Configure plugin paths for custom car, sensor, and environment plugins -->
+  <let name="gz_plugin_path" value="$(find-pkg-prefix bno055_plugin)/lib:$(find-pkg-prefix gps_plugin)/lib:$(find-pkg-prefix car_plugin)/lib:$(find-pkg-prefix traffic_light_plugin)/lib:$(find-pkg-prefix pedestrian_object_plugin)/lib" />
+
+  <!-- Launch Gazebo with GUI -->
+  <executable cmd="gz sim $(find-pkg-share sim_pkg)/worlds/world_with_separators.world -r --render-engine ogre" output="screen" if="$(var gui)">
+    <env name="GZ_SIM_SYSTEM_PLUGIN_PATH" value="$(var gz_plugin_path)" />
+    <env name="GZ_SIM_RESOURCE_PATH" value="$(find-pkg-share models_pkg)" />
+    <env name="GZ_GUI_CONFIG_PATH" value="$(env HOME)/.gz/sim/8/gui.config" />
+  </executable>
+  
+  <!-- Launch Gazebo headless (server-only mode) -->
+  <executable cmd="gz sim $(find-pkg-share sim_pkg)/worlds/world_with_separators.world -r --render-engine ogre -s" output="screen" unless="$(var gui)">
+    <env name="GZ_SIM_SYSTEM_PLUGIN_PATH" value="$(var gz_plugin_path)" />
+    <env name="GZ_SIM_RESOURCE_PATH" value="$(find-pkg-share models_pkg)" />
+    <env name="GZ_GUI_CONFIG_PATH" value="$(env HOME)/.gz/sim/8/gui.config" />
+  </executable>
+</launch>

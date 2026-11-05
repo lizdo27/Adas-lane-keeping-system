@@ -1,0 +1,67 @@
+<launch>
+
+    <!-- Bridge for car control commands (ROS 2 -> Gazebo) -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="command_bridge"
+          args="/automobile/command@std_msgs/msg/String@gz.msgs.StringMsg"/>
+
+    <!-- Bridge for car feedback (Gazebo -> ROS 2) -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="feedback_bridge"
+          args="/automobile/feedback@std_msgs/msg/String[gz.msgs.StringMsg"/>
+
+    <!-- Bridge for IMU sensor (Gazebo -> ROS 2) — legacy euler angles -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="imu_bridge"
+          args="/automobile/IMU@geometry_msgs/msg/Vector3[gz.msgs.Vector3d"/>
+
+    <!-- Bridge for full IMU data: orientation + angular velocity + linear acceleration -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="automobile_imu_data_bridge"
+          args="/automobile/imu/data@sensor_msgs/msg/Imu[gz.msgs.IMU"/>
+
+    <!-- Bridge for OAK-D built-in IMU -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_imu_data_bridge"
+          args="/oak/imu/data@sensor_msgs/msg/Imu[gz.msgs.IMU"/>
+
+    <!-- Bridge for encoder odometry -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="encoder_odom_bridge"
+          args="/encoder_odom@nav_msgs/msg/Odometry[gz.msgs.Odometry"/>
+
+    <!-- Bridge for GPS raw pose (Gazebo -> ROS 2); sensor_converter adds 1 s delay and republishes as GpsTagPose on /automobile/localisation -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="gps_bridge"
+          args="/automobile/localisation_raw@geometry_msgs/msg/Pose[gz.msgs.Pose"/>
+
+    <!-- Bridge for original camera (Gazebo -> ROS 2) -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="camera_bridge"
+          args="/automobile/image_raw@sensor_msgs/msg/Image[gz.msgs.Image"/>
+
+    <!-- Bridge OAK-D RGB -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_rgb_bridge"
+          args="/oak/rgb/image_raw@sensor_msgs/msg/Image[gz.msgs.Image"/>
+    <!-- Gazebo publishes camera_info at /oak/rgb/camera_info; remap to _gz so
+         mono_converter can relay it with a corrected frame_id without a publish loop -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_rgb_info_bridge"
+          args="/oak/rgb/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo">
+      <remap from="/oak/rgb/camera_info" to="/oak/rgb/camera_info_gz"/>
+    </node>
+
+    <!-- Bridge OAK-D Depth -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_depth_bridge"
+          args="/oak/stereo/image_raw@sensor_msgs/msg/Image[gz.msgs.Image"/>
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_depth_info_bridge"
+          args="/oak/stereo/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo"/>
+
+    <!-- Bridge OAK-D Mono LEFT -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_left_bridge"
+          args="/oak/left/image_raw@sensor_msgs/msg/Image[gz.msgs.Image"/>
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_left_info_bridge"
+          args="/oak/left/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo">
+      <remap from="/oak/left/camera_info" to="/oak/left/camera_info_gz"/>
+    </node>
+
+    <!-- Bridge OAK-D Mono RIGHT -->
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_right_bridge"
+          args="/oak/right/image_raw@sensor_msgs/msg/Image[gz.msgs.Image"/>
+    <node pkg="ros_gz_bridge" exec="parameter_bridge" name="oak_right_info_bridge"
+          args="/oak/right/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo">
+      <remap from="/oak/right/camera_info" to="/oak/right/camera_info_gz"/>
+    </node>
+
+</launch>

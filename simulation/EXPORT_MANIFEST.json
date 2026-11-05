@@ -1,0 +1,536 @@
+{
+  "upstream": "https://github.com/UniPD-DriveOps-BFMC/SimulatorROS2",
+  "models": [
+    "camera",
+    "car_body",
+    "chassis",
+    "rcCar_assembly",
+    "separator",
+    "steering_column",
+    "track",
+    "wheel_left",
+    "wheel_right"
+  ],
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "4e7362758ec5904474a46e28c98ac723289233225b5e327c8ff324cafdb2f784"
+    },
+    {
+      "path": "bashr",
+      "sha256": "3d32fb4db7019f9b61729288d19f788c43b60e1510ce68283bec23584055a16c"
+    },
+    {
+      "path": "src/utils/package.xml",
+      "sha256": "6cf467fab67063f6063cd509c5a0848460804ca38d94ac472d2d0cc3fb279e5b"
+    },
+    {
+      "path": "src/utils/CMakeLists.txt",
+      "sha256": "dc3027a5146d629b6a73b9f00e4877d868ff7a70a8e08537388ad23c57d0592d"
+    },
+    {
+      "path": "src/utils/msg/IMU.msg",
+      "sha256": "c1d18f222314c4316e90877518aeec62a8618b337544eff098025f612d0e95d0"
+    },
+    {
+      "path": "src/utils/msg/Localisation.msg",
+      "sha256": "1cc75b13b196f50a3c705e1b28d8dfc55de7e1a0e903b5ca89b1bdab0c8388ef"
+    },
+    {
+      "path": "src/plugins_pkgs/pedestrian_object_plugin/package.xml",
+      "sha256": "91b3bdd325542d0e06c6d24a3faf778a06afedaefbf546f0f27ecfdcaba617e1"
+    },
+    {
+      "path": "src/plugins_pkgs/pedestrian_object_plugin/CMakeLists.txt",
+      "sha256": "1edce952a7179023508c95b4b4eb48baef032d373a24ad891b385e7f4c3250ac"
+    },
+    {
+      "path": "src/plugins_pkgs/gps_plugin/package.xml",
+      "sha256": "b40161eb30d1409c22295e961104267990b4507786369237c5e58fa3609e2cf5"
+    },
+    {
+      "path": "src/plugins_pkgs/gps_plugin/CMakeLists.txt",
+      "sha256": "55f8e12a3a56fd60c6c7d330b670683ad07a2c08cada06d93eea7d8bf1f3837f"
+    },
+    {
+      "path": "src/plugins_pkgs/bno055_plugin/package.xml",
+      "sha256": "9371368a0b7ae284f54f4a4cff41eb70cb1d3bbe774a77cdfe13b9225e165788"
+    },
+    {
+      "path": "src/plugins_pkgs/bno055_plugin/CMakeLists.txt",
+      "sha256": "d90080ca63b389bbb93c3579d167fab2d4c6b36ce6924c60c1917764d8a70829"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/package.xml",
+      "sha256": "05f0452b7c56d8bb796249ca76d0ccc1d0fecd8da5d7a401f95d1bab459b14de"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/CMakeLists.txt",
+      "sha256": "4e86d03210468c82b7003eda53e8a5c8aa1a35b37059c5489f7ac7be72ab898a"
+    },
+    {
+      "path": "src/plugins_pkgs/traffic_light_plugin/package.xml",
+      "sha256": "7f5ee7db7dc7a12599df34140367d47707730b0a0b641faa30a14c58c06aa7fb"
+    },
+    {
+      "path": "src/plugins_pkgs/traffic_light_plugin/CMakeLists.txt",
+      "sha256": "56fa2166687c787b3f1f7d512ef6c8a05f06e9d110dedbbaeff6e3c5c831b148"
+    },
+    {
+      "path": "src/plugins_pkgs/pedestrian_object_plugin/src/geometric_point.cpp",
+      "sha256": "526e4758086c61a8262821d47a51b69ab2c97e84ea512e5a4ff292d64691675b"
+    },
+    {
+      "path": "src/plugins_pkgs/pedestrian_object_plugin/src/pedestrian_object_plugin.cpp",
+      "sha256": "a73fb8d6300c09ad078abd90c60300b8b2d58998c4700c0f93f7a6e115321543"
+    },
+    {
+      "path": "src/plugins_pkgs/pedestrian_object_plugin/include/pedestrian_object_plugin.h",
+      "sha256": "61c79d731f2b2011ed6e6d40178437b36e8513c51d7330833dc8bb4708f5d52b"
+    },
+    {
+      "path": "src/plugins_pkgs/pedestrian_object_plugin/include/geometric_point.h",
+      "sha256": "93e043771789602c79dce8e740950acf867f29d0350a025f5139086e63e6d029"
+    },
+    {
+      "path": "src/plugins_pkgs/gps_plugin/src/gps_plugin.cpp",
+      "sha256": "2c555dafe450635d13cffc1a4bfab0e0586b8f3b3aa03d41de23cd9a02a23fe3"
+    },
+    {
+      "path": "src/plugins_pkgs/gps_plugin/include/gps_plugin.hpp",
+      "sha256": "52f242662e241780024707f61d2c10ffb95f7d27c53a7dbc10b90a4b1e5cae20"
+    },
+    {
+      "path": "src/plugins_pkgs/bno055_plugin/src/bno055_plugin.cpp",
+      "sha256": "1359d408b17b579f6b2b24064286115761bfbbc0f050d0e021068654cc9e94d2"
+    },
+    {
+      "path": "src/plugins_pkgs/bno055_plugin/include/bno055_plugin.hpp",
+      "sha256": "d9f9b6ce23c4e6f11e70cf066afe1436e800e7dd1ea4be265fdaaf12b1793445"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/src/carlikerobot.cpp",
+      "sha256": "28445257e6a2d69b7bb2085d10903218d8fa69132fca7568166cb9e731ba43fe"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/src/carlikerobot_ros_plugin.cpp",
+      "sha256": "1b94dd1b9ae29753356f58628fca6a1abafaa40415ffd49de8a62effab2dfbf2"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/carlikerobot.hpp",
+      "sha256": "a037f92394f674d1238fb6cf76ba0f7a31600adf50c33576fe030f08a890e4e5"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/carlikerobot_ros_plugin.hpp",
+      "sha256": "65a32d2908d4b23bbd9ed73b4f72d99a5784788602afb6f10d3b25ae40a24155"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/encodings.h",
+      "sha256": "1d4c62bd4ecc0b5a8b4b53faf48a8d09f09f086e41a90fc2b135517c3d148379"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/encodedstream.h",
+      "sha256": "394710616961270b0e4033c03a22b2e5b411958dc07eb4495ba36131648e3558"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/cursorstreamwrapper.h",
+      "sha256": "9e619d9a57c2fdf51e89e422668d6fe3065cf227a66261ac2519f1870398fe39"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/rapidjson.h",
+      "sha256": "04cb7c640fe18a3d696b92fba9af31b42fb2db294ad641fe738ddfbddca97284"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/memorybuffer.h",
+      "sha256": "6890c9bde0a0edf28406b3f5757333a578ef83e97f3ca488c3c0762eea1501af"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/pointer.h",
+      "sha256": "64c1ad26d48f0acfba4208512077a0995bbb7ac77ee88c61abdcce823fdaa9c3"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/memorystream.h",
+      "sha256": "a7bf789978c6d7dda7bb93c0c9555b7d53b3177cbf34c3998c7e18068a3723f5"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/prettywriter.h",
+      "sha256": "75adaed0efd180955a44cd5322fb20f5f1b15b5ed40998fe88c50fc2ecd2c64f"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/filereadstream.h",
+      "sha256": "d3d2aa0540471f4e58987f2184067e7cdf229363648ebf81af43c7e659bf2a40"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/fwd.h",
+      "sha256": "107d783b3fa7a9c2470b734f56ca15e620f6106fd47dc8f4efdd441f75395284"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/schema.h",
+      "sha256": "5f7ca2eb7de3ebcbac9fb748dbdae7091ac283535e4794261b634609294ffc3e"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/allocators.h",
+      "sha256": "bf6f3a6b2fc0b62557554a15a9c301479cfb589f5529d671931908862e90b74c"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/document.h",
+      "sha256": "8b4ace5e179728205d634eca89aaeff10f60a46ef75e08a3572ee7b68ea29832"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/filewritestream.h",
+      "sha256": "b16d4cbb8618e1b2bf58d91632f4a31a1fb2e4938b4cded365d723487792f0a5"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/stream.h",
+      "sha256": "a3708a941a130a5679d2302368169852e5c4ca5f54758ea0e94caf61615c8ae0"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/stringbuffer.h",
+      "sha256": "4788a86bc76a2880bdefa1765b366bda2303b62c1b8de1aabb4940fe37722b88"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/ostreamwrapper.h",
+      "sha256": "645eb8da79e36fcf0beb315a8ea336c6bd1a4db2003318b1ca68f17a167b27e6"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/writer.h",
+      "sha256": "40db14761c8f72d44261553400c24111b64bcc367bd23eeed4c45043ec80b39b"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/istreamwrapper.h",
+      "sha256": "662d18f16a26caec242c214c75b92394462f1e7dc10b786a61e1bf2f7e33e827"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/reader.h",
+      "sha256": "9902058538bcca216f57b74bb404fa666b1b8d9224acd5b173ab3189c68db6f0"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/error/error.h",
+      "sha256": "64fdd0bad7480cd2a257fddf0aaa16b9a8d4a401189ebe0e44cee2ee6be8687c"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/error/en.h",
+      "sha256": "dd2eeb00fe54ba5d140b581dd4467773c3ea72dbf6f2ef87135b187d6d11d6f7"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/msinttypes/inttypes.h",
+      "sha256": "78ee41fd99bcbe59ca93f6a870a83c0a90f4b179af571f6e684f2600491bbae7"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/msinttypes/stdint.h",
+      "sha256": "bf2d1bc4885bc1e0720ec9af8f399477c7e105ae1e70e2863c31a8123cae1c17"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/pow10.h",
+      "sha256": "74cd5ef251a854565a36abe49521be4d8ed17a76e3d27231fd119fb9374a9364"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/strtod.h",
+      "sha256": "ad524108ca9df43b73a4009c2a47255436403711b3e9c42b3b1ee0b32675a814"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/strfunc.h",
+      "sha256": "9bcc71e2e8f7096325218cebd9aa5338d2c8539bddfc6324eec6d8037c466dbe"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/biginteger.h",
+      "sha256": "7771c3f2c82c4736d32b487558d19eaacf678e030945c5b5c994ae9ffa952755"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/meta.h",
+      "sha256": "5fcbfd72da1732926e4d0be2a1d79dce892f98d7b66879f818c57583a82505d3"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/dtoa.h",
+      "sha256": "25d736a672d49b85355b1e064f86010e13d520a10a69163dff8d051dac4b512d"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/stack.h",
+      "sha256": "1bc01f4623d7b4ed6e890220fa9753375c0f0fb87c8a84f41cd7eecf38a38cd2"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/ieee754.h",
+      "sha256": "00757a3dc2aad5b90d915f9c49b378026dc612d49a7f057106d72b1ebd1a0105"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/diyfp.h",
+      "sha256": "2efb18fcfaf4882a23720b0e08fdbe3e94be3b282b6c5c017d18bfd205e80880"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/clzll.h",
+      "sha256": "4ca3e63eaae4c67b049e8a6cbb532182e1d9c9023b7d992c556fcab0c2f4c045"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/swap.h",
+      "sha256": "72acfabebd33f44869e7724603e57744da33337998b32443b66eaba58d2bbbfd"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/regex.h",
+      "sha256": "c1a1ca2a4f83dd620f2d0700392df94ed5b5c47ec0061b6f946ccdc416cc9b13"
+    },
+    {
+      "path": "src/plugins_pkgs/car_plugin/include/rapidjson/internal/itoa.h",
+      "sha256": "a0f965f33b11ce112b7bf2fbdeaf5338fca174e33f9f47608ccdd6d8559f3871"
+    },
+    {
+      "path": "src/plugins_pkgs/traffic_light_plugin/src/traffic_light_plugin.cpp",
+      "sha256": "fe08337d1133c33333897c2fb0bbdb93195bfd2b9e331f7ae1461fdf13dfe314"
+    },
+    {
+      "path": "src/plugins_pkgs/traffic_light_plugin/include/traffic_light_plugin.hpp",
+      "sha256": "b2ad47174ae3a0978fcfd3950da1760d32d5e7a1a393dd8f063a22c232968cb3"
+    },
+    {
+      "path": "src/sim_pkg/CMakeLists.txt",
+      "sha256": "de3c153fb326b7e8ac358afc97783054d2551fca757476a36625206d59e19724"
+    },
+    {
+      "path": "src/sim_pkg/package.xml",
+      "sha256": "008caa211fa7ab4908e2f90c66a2a25c3f57772e59d21b35b683c875a2cbce4a"
+    },
+    {
+      "path": "src/sim_pkg/launch/map_with_car_light.launch",
+      "sha256": "ef5c890ac20c6e185f0d91a6fdc52e5cad2bca32b39319d77cb4999b86521ed4"
+    },
+    {
+      "path": "src/sim_pkg/launch/gazebo.launch",
+      "sha256": "539e825066ddaa313fba33802729841b6e2adc6a87f419b2ce5cb76f8f7ca888"
+    },
+    {
+      "path": "src/sim_pkg/launch/bridge.launch",
+      "sha256": "4bda0011cfa9e0aa3424dbe2ff98c921967fc2fd6f16a824644132d1283136c6"
+    },
+    {
+      "path": "src/sim_pkg/launch/sublaunchers/car.launch",
+      "sha256": "5ac316ab5d8df9c0589c7a0f96d309b5eceb879fd633d58ab67c886795386364"
+    },
+    {
+      "path": "src/sim_pkg/worlds/world_with_separators.world",
+      "sha256": "428481a9eef758adb574838c7308daa33b99a630ddbbc1a9ce182d624932d17d"
+    },
+    {
+      "path": "src/models_pkg/CMakeLists.txt",
+      "sha256": "1d2ad98aad8f086f2181716fb9186e551205024b447e061c47898bf7eb65644e"
+    },
+    {
+      "path": "src/models_pkg/package.xml",
+      "sha256": "bcbf239ef90488f4b04a9a35bc575d4affa7ec360c1353cb8515962072a1bd73"
+    },
+    {
+      "path": "src/models_pkg/camera/model.config",
+      "sha256": "0fdbb638275ec4c4fd2d5575ea92c20a6c2d5020c7f6c95a1d067c6b8e58234e"
+    },
+    {
+      "path": "src/models_pkg/camera/model.sdf",
+      "sha256": "7855e5452888ba54a32ecb61d181c3b4eeded9ef96508df398058b370dcaff6b"
+    },
+    {
+      "path": "src/models_pkg/car_body/model.config",
+      "sha256": "a669cdc8e247865e3eb23141e5d711f9221f5f6519fa0344d2c60b8a75e6af4f"
+    },
+    {
+      "path": "src/models_pkg/car_body/model.sdf",
+      "sha256": "ed252c0dae924134933a14ec73749eace0467aa42c7cb8b66951b1a9067feac9"
+    },
+    {
+      "path": "src/models_pkg/car_body/meshes/Colors.png",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/models_pkg/car_body/meshes/CarBody.dae",
+      "sha256": "fcf9d9b0a9ae1611effbdf57094e3a3f22abbb9737b729242c058b2f37047b24"
+    },
+    {
+      "path": "src/models_pkg/car_body/meshes/carBody_text.png",
+      "sha256": "ef0e324770722eab63de2fa5fc90f91336d20982e0607834a9492d5cbd3fe834"
+    },
+    {
+      "path": "src/models_pkg/car_body/materials/textures/carBody_text.png",
+      "sha256": "ef0e324770722eab63de2fa5fc90f91336d20982e0607834a9492d5cbd3fe834"
+    },
+    {
+      "path": "src/models_pkg/chassis/model.config",
+      "sha256": "294856d661897664d67ffec72ffe83b0cbedc1b2e29df7374c1f28a12e5f4cf0"
+    },
+    {
+      "path": "src/models_pkg/chassis/model.sdf",
+      "sha256": "a8ef69fc13d02750ccf091487567c4e26de8284160ea414594e3a347be4d3c94"
+    },
+    {
+      "path": "src/models_pkg/chassis/meshes/chassisV5.dae",
+      "sha256": "8a89df9611cbd42c0c1996b94821601cb6ebec182c4e7d3acfa099835ac999d1"
+    },
+    {
+      "path": "src/models_pkg/rcCar_assembly/model.config",
+      "sha256": "a188cbe4e7270377459f10e26e1f2b3d584668d8e8d7c0760306b63d9653bb3f"
+    },
+    {
+      "path": "src/models_pkg/rcCar_assembly/model.sdf",
+      "sha256": "20f3b55850676be7717a7141dfee457a3d63f9eb9d8aabda80bd37ce0dbb3c1d"
+    },
+    {
+      "path": "src/models_pkg/separator/model.config",
+      "sha256": "447ea5b60affdef19f1a159bc42f4089b263ec68f5224df8960d218d032bbcce"
+    },
+    {
+      "path": "src/models_pkg/separator/model.sdf",
+      "sha256": "027b296799206a284a5fe509e57771555edb3f1579d441d94db5e557d6489dd7"
+    },
+    {
+      "path": "src/models_pkg/separator/meshes/separator.dae",
+      "sha256": "8d2d6762f3ffa5af1729ac44f046138143dedb132e11c2f615495c325720f943"
+    },
+    {
+      "path": "src/models_pkg/steering_column/model.config",
+      "sha256": "c6f924d966361107ae49e07371afc968edd8e0e493c0e46359106e06bb0eeec4"
+    },
+    {
+      "path": "src/models_pkg/steering_column/model.sdf",
+      "sha256": "7223b93afcd11d7ea20049e2a006a934cb5702e8cc0834e2bfa84dc57c1781e1"
+    },
+    {
+      "path": "src/models_pkg/track/model.config",
+      "sha256": "6abee89c97e71539a103336494cf3b4b679ff9a5c055a2f18dcda2b4d252c72b"
+    },
+    {
+      "path": "src/models_pkg/track/model.sdf",
+      "sha256": "2e7f141fc1c5876996478556187482467e31bd76422285f051eded3f2efebadd"
+    },
+    {
+      "path": "src/models_pkg/track/materials/textures/2021_VerySmall.png",
+      "sha256": "589a4e83c35afd4ae0a08ffd8a276247fc0d7a5935aefded7fe60709eda21fd4"
+    },
+    {
+      "path": "src/models_pkg/track/materials/textures/2021_Small.png",
+      "sha256": "9a64375197b7dd0f9fc01dfeceb41759d4bc394eca4e9baf33949aabbb4b5d79"
+    },
+    {
+      "path": "src/models_pkg/track/materials/textures/2021_Medium.png",
+      "sha256": "43f93068de8eac4d598e9957ad5cbf91d24d7fd3b9f6db32a4cae160bef4f92b"
+    },
+    {
+      "path": "src/models_pkg/track/materials/textures/2024_Small.png",
+      "sha256": "678cdbcab4549ec95ae49ff0c05d9ea5bd8e1a9f3edbc0fbc88f079fc46b6d31"
+    },
+    {
+      "path": "src/models_pkg/track/materials/textures/2024_Medium.png",
+      "sha256": "f57fae0ddddec290ad1044d2ebc1184226956f66e369813c56500d08db9f1664"
+    },
+    {
+      "path": "src/models_pkg/track/materials/textures/2024_Big.png",
+      "sha256": "296a0da6440bf5547bccc1279238fd1f3db9ff9a5bb5c68ad6e40716f1d3849f"
+    },
+    {
+      "path": "src/models_pkg/track/materials/textures/2021_Big.png",
+      "sha256": "f18e1a800373eda44f2f05375f92c00a994c828b3cb0a51a9f28710583a1b9b1"
+    },
+    {
+      "path": "src/models_pkg/wheel_left/model.config",
+      "sha256": "a4e92251b64f3309e9decb847f2f8d0ccaef6bd7b1ec5589c227a8468331e4cf"
+    },
+    {
+      "path": "src/models_pkg/wheel_left/model.sdf",
+      "sha256": "fd368878118f381c249609690f38a1517eca20c27499320f2d8dc7cd2bd4c1fd"
+    },
+    {
+      "path": "src/models_pkg/wheel_left/meshes/rim.dae",
+      "sha256": "f572ddd5c06741a207b9df4a3613729368fa76b425fdf6f093d811793a0ffe99"
+    },
+    {
+      "path": "src/models_pkg/wheel_left/meshes/tire.dae",
+      "sha256": "b0a7379aed770ac6e81dbc03650ee7e5fad383116186ce3ad4ee621955d91e48"
+    },
+    {
+      "path": "src/models_pkg/wheel_left/meshes/rim_old.dae",
+      "sha256": "8bf3ec9c468b98edb72b07966c4c70a3810f6971756fa648e87313797913c00e"
+    },
+    {
+      "path": "src/models_pkg/wheel_right/model.config",
+      "sha256": "1bfc14070743ebc0c5584620ef2300e48f080ba1d4d1fbea88131b7ab2eeea59"
+    },
+    {
+      "path": "src/models_pkg/wheel_right/model.sdf",
+      "sha256": "132ef1e68af2df4fcc8dab7bf2a10035e6ee9236c4c503380db1f35306c0bf87"
+    },
+    {
+      "path": "src/models_pkg/wheel_right/meshes/rim.dae",
+      "sha256": "059cb1eefea9bc175eb4e581c5d8f3e2e33d7458114da2aa750978a8fb963d25"
+    },
+    {
+      "path": "src/models_pkg/wheel_right/meshes/tire.dae",
+      "sha256": "b0a7379aed770ac6e81dbc03650ee7e5fad383116186ce3ad4ee621955d91e48"
+    },
+    {
+      "path": "basic_autonomy/adas_ai_perception.py",
+      "sha256": "0741a871bbb81da8e2edc339ed9b0ddc9b9dfdee53eed133a5e164238b34d8b1"
+    },
+    {
+      "path": "basic_autonomy/adas_control.py",
+      "sha256": "df6594f611b68dbf169593ec521efed6fa13451f9d7660af69c181ffb12def47"
+    },
+    {
+      "path": "basic_autonomy/adas_dashboard.py",
+      "sha256": "ce423032ef149ea4e23560b8129e3c029eef162d89653b6a09b57bd47de4c4ae"
+    },
+    {
+      "path": "basic_autonomy/adas_edges.py",
+      "sha256": "da43a22309a2d82cdef41125f277e9324a38f146ad5ba986483836a94160e605"
+    },
+    {
+      "path": "basic_autonomy/adas_guidance.py",
+      "sha256": "f628793677fa4349e065077dcca881552e233199a9f283aad15b98f32eec61e6"
+    },
+    {
+      "path": "basic_autonomy/adas_lane_choice.py",
+      "sha256": "cbb4d04f5ce96cd68e252dd84b698a73cbe0339f1d8c90a35daccc35c0342fa6"
+    },
+    {
+      "path": "basic_autonomy/adas_marking_perception.py",
+      "sha256": "6fb9dc4bd23e29a1dd809d8bdecfff7d3735d29f05e8b9753154e1a87387159b"
+    },
+    {
+      "path": "basic_autonomy/adas_near_guard.py",
+      "sha256": "57157fef60e884795802944d3186e30c755c9544f314feb6836bf84d9f3ae97e"
+    },
+    {
+      "path": "basic_autonomy/adas_recovery.py",
+      "sha256": "8195b88be5678427c52e7fd9f3ac08d60bb6ae29e32836b209a151d6bcc01d6d"
+    },
+    {
+      "path": "basic_autonomy/adas_view.py",
+      "sha256": "a2f53ff0d111db7bac286408b0abf260e9c011d9adbad76a21f62f28c51e4776"
+    },
+    {
+      "path": "basic_autonomy/driver_input.py",
+      "sha256": "7ca36942fc84cc0c37fb48dd1fed9ca1e0c2a6a2f7aaf093f8294a826a979e9a"
+    },
+    {
+      "path": "basic_autonomy/lane_control.py",
+      "sha256": "bc0bc240c1c8be8c0f4312cd479f1175bc6efd8f0022adc506ce65d81cb9fe11"
+    },
+    {
+      "path": "basic_autonomy/vroom_curves.py",
+      "sha256": "a6b91874242621a1050aee2a09ac851b77b68dce9ca3f9e24aea8b0aa2e6e270"
+    },
+    {
+      "path": "basic_autonomy/vroom_identity.py",
+      "sha256": "50dfabc442228a9ec6c32bac059626792ca0edb016438bc7717f88b84c4f345a"
+    },
+    {
+      "path": "basic_autonomy/vroom_lane.py",
+      "sha256": "e93c2338a9a21921e24ab4996a9eba438075d31dfc2c5ced66ef7b7a5bb81eae"
+    },
+    {
+      "path": "basic_autonomy/vroom_recording.py",
+      "sha256": "ee54f668c2d8344c05920e76b41ada1c9abaee8ef7ffe4dde83209c660bb71e8"
+    },
+    {
+      "path": "basic_autonomy/vroom_tracking.py",
+      "sha256": "b83607b99bed3cdf33cbaff4f19f5ec617c054e9e6517a22fb006987922cf908"
+    },
+    {
+      "path": "basic_autonomy/vroom_config.json",
+      "sha256": "bbde8ef080dae681430b080e597201225b7b370fc2bb990487831f32c876ffdc"
+    }
+  ]
+}
