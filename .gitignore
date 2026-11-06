@@ -239,3 +239,7 @@ datasets/
 *.avi
 
 dataset/
+
+# Local real-video experiment outputs
+hybrid_masks*/
+outputs/
