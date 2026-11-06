@@ -14,7 +14,7 @@ Hiện đã có model segmentation pilot, code nhận diện AI/OpenCV trên vid
 
 ## Chạy nhận diện video thật
 
-Đặt model segmentation hai lớp `lane_marking`, `crosswalk` tại `models/best.pt`. Dùng video gốc chưa có overlay:
+Model segmentation hai lớp `lane_marking`, `crosswalk` đã có tại `models/best.pt` qua Git LFS. Chạy `git lfs install` và `git lfs pull` sau khi clone để tải trọng số. Dùng video gốc chưa có overlay:
 
 ```bash
 python3 -m venv .venv
@@ -36,7 +36,7 @@ Có thể truyền `--weights /duong/dan/best_real.pt` và `--no-show`. Các ch�
 | `tests/` | Kiểm tra logic hợp nhất mask |
 | `training/` | Notebook train pilot trên Colab |
 | `docs/` | Thuật toán, kiến trúc, kết quả và nội dung báo cáo |
-| `models/` | Hướng dẫn đặt trọng số cục bộ; chưa phát hành best.pt |
+| `models/` | Trọng số pilot best.pt qua Git LFS, metadata và hướng dẫn |
 | `data/` | Mô tả dataset, không chứa ảnh huấn luyện |
 | `hardware/` | Nhóm bổ sung linh kiện và sơ đồ xe thật |
 | `media/` | Nhóm bổ sung ảnh/video xe thật |
@@ -54,4 +54,4 @@ python tests/test_fusion.py
 
 ## Giấy phép và tài nguyên ngoài
 
-Mã của dự án theo [LICENSE](LICENSE). Thành phần mô phỏng giữ [giấy phép riêng](simulation/LICENSE). Thư viện Ultralytics có điều kiện cấp phép riêng; giấy phép repo không thay thế giấy phép thư viện, model hoặc dữ liệu nguồn. Trọng số, dataset và thông tin phần cứng chưa được phát hành cùng phần bổ sung này.
+Mã của dự án theo [LICENSE](LICENSE). Thành phần mô phỏng giữ [giấy phép riêng](simulation/LICENSE). Thư viện Ultralytics có điều kiện cấp phép riêng; giấy phép repo không thay thế giấy phép thư viện, model hoặc dữ liệu nguồn. Trọng số pilot đã phát hành qua Git LFS. Dataset và thông tin phần cứng chưa được phát hành. Xem [danh mục bàn giao](docs/DELIVERY.md) để biết phần đã có và phần nhóm cần bổ sung.

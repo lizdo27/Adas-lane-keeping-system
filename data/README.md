@@ -21,3 +21,5 @@ Chia theo block 100 frame, vùng đệm 5 frame mỗi đầu/cuối, giữ cùng
 Crosswalk còn lẫn polygon từng thanh với polygon cả vùng. Nhóm chấp nhận cho pilot nhận biết hiện diện, nhưng inconsistency này vẫn ảnh hưởng train và đánh giá. Có 11 trường hợp ảnh trùng nhưng nhãn khác trong nhóm duplicate; bản pilot giữ nhãn xuất hiện trước, chưa giải quyết khác biệt bằng duyệt tay. Không xem tập đã “làm sạch hoàn toàn”.
 
 Phiên bản tiếp theo nên thống nhất quy tắc crosswalk, duyệt nhãn và tăng ảnh test từ buổi quay độc lập. Để tái lập cần giữ ZIP, `manifest.json`, `merge_report.json`, danh sách loại và SHA256 cùng bản model.
+
+Báo cáo máy đọc được và SHA256 của ZIP pilot: [merge_report.json](merge_report.json). Không đính kèm ảnh hoặc manifest đường dẫn ảnh riêng.

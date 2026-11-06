@@ -243,3 +243,6 @@ dataset/
 # Local real-video experiment outputs
 hybrid_masks*/
 outputs/
+
+# Published pilot checkpoint; other local weights stay ignored
+!/models/best.pt

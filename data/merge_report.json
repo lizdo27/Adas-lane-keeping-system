@@ -1,0 +1,55 @@
+{
+  "status": "pilot only: mixed crosswalk annotation",
+  "images": {
+    "test": 32,
+    "valid": 41,
+    "train": 1733
+  },
+  "objects": {
+    "test": {
+      "0": 155,
+      "1": 4
+    },
+    "valid": {
+      "0": 97,
+      "1": 53
+    },
+    "train": {
+      "0": 6355,
+      "1": 2384
+    }
+  },
+  "excluded_issues": 760,
+  "exact_duplicates": 14,
+  "omitted": {
+    "temporal_boundary_guard": 236,
+    "augmented_or_extra_eval_variant": 556
+  },
+  "split_blocks": {
+    "7": "valid",
+    "10": "valid",
+    "5": "valid",
+    "6": "test",
+    "15": "test",
+    "14": "train",
+    "13": "train",
+    "9": "train",
+    "8": "train",
+    "1": "train",
+    "2": "train",
+    "12": "train",
+    "16": "train",
+    "4": "train",
+    "11": "train",
+    "0": "train",
+    "3": "train"
+  },
+  "notes": [
+    "All source names belong to one apparent recording sequence. Block split with 5-frame guard reduces but cannot eliminate scene leakage.",
+    "Evaluation uses only original export val/test records, one per source family; original augmentation provenance cannot be proven.",
+    "Entire image excluded for any malformed/degenerate polygon or empty annotation. No bounding boxes converted to fake masks.",
+    "s (2 objects) and class named 0 (1 object) visually verified as lane_marking.",
+    "Crosswalk per-bar and whole-region annotations kept by user request; mask metrics are not a clean measure of crossing-region detection."
+  ],
+  "dataset_zip_sha256": "3f8757713a3e9efe0daf204d98b63d082f9cba74f3882c109c9e44b596f48672"
+}

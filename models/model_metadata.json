@@ -1,0 +1,13 @@
+{
+  "filename": "best.pt",
+  "source_filename": "best_real.pt",
+  "bytes": 7014516,
+  "sha256": "324a856e7f72932739693dfff4390bdc950cecb64bb6ac3d645cc73a78636c81",
+  "task": "segment",
+  "names": {
+    "0": "lane_marking",
+    "1": "crosswalk"
+  },
+  "architecture": "yolov8n-seg",
+  "status": "pilot; offline video perception only"
+}

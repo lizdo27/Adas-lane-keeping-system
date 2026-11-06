@@ -1,18 +1,34 @@
 # Model AI cho ADAS xe thật
 
-Đặt trọng số tại `models/best.pt` từ thư mục gốc repo. Chưa có trọng số được đưa lên GitHub.
-Model pilot là YOLOv8n segmentation nhận diện `lane_marking` và `crosswalk`; tên và thứ tự class phải khớp bộ chạy trên xe thật.
+Đã phát hành model pilot tại `models/best.pt` qua **Git LFS**. File này được chép nguyên byte từ `best_real.pt` đã dùng thử video thật, không phải model SEAME cũ.
 
-Nếu export ONNX, đặt `models/best.onnx`. Cần bộ chạy hỗ trợ định dạng tương ứng; việc chép file chưa tự tích hợp model vào xe.
+- Kiến trúc xác nhận khi mở file: YOLOv8n-seg, task segmentation.
+- Hai lớp: `0: lane_marking`, `1: crosswalk`.
+- Kích thước: 7.014.516 byte.
+- SHA256 và metadata: [model_metadata.json](model_metadata.json).
+- Kết quả validation và giới hạn: [EXPERIMENTS](../docs/EXPERIMENTS.md).
+- Trạng thái: pilot; chưa đủ bằng chứng triển khai điều khiển xe thật.
 
-Kèm thông tin mỗi model: phiên bản, ngày train, tên/thứ tự class, dataset và cách chia train/val/test, kích thước ảnh, metrics, phiên bản thư viện, SHA256 và link tải.
+## Tải đúng trọng số
 
-*.pt/*.onnx đang bị .gitignore loại khỏi commit, dù .gitattributes đã cấu hình LFS. Đặt file để chạy cục bộ trước; khi phát hành, chọn Git LFS hoặc link tải riêng và cập nhật ignore có chủ đích.
+Cài Git LFS trên máy, sau đó tại repo:
 
-Bộ chạy xe thật chưa được cung cấp trong bản repo này. Không coi việc lưu model là đã hoàn thiện triển khai trên Pi 5.
+```bash
+git lfs install
+git lfs pull
+sha256sum models/best.pt
+```
 
-## Thử model hiện tại
+Nếu file tải về chỉ khoảng vài trăm byte và mở ra thấy `version https://git-lfs.github.com/spec/v1`, đó là pointer, chưa phải trọng số. Chạy `git lfs pull`. Khi clone mới cũng cần Git LFS; tải ZIP repository có thể không chứa nội dung LFS tùy cấu hình GitHub.
 
-Code offline đã có tại [src/perception](../src/perception/README.md). Hybrid nhận lớp theo tên; notebook pilot dùng `0: lane_marking`, `1: crosswalk`. Không đưa model SEAME cũ vào đánh giá như thể đó là model dữ liệu thật mới.
+## Chạy thử
 
-[Xem metrics và giới hạn model pilot](../docs/EXPERIMENTS.md). Khi thay trọng số, ghi lại SHA256, dataset và phiên bản thư viện; không mặc định metrics cũ áp dụng cho model mới.
+```bash
+python src/perception/hybrid_video.py --video /duong/dan/video_goc.mp4
+```
+
+Đọc [hướng dẫn perception](../src/perception/README.md) để cài môi trường. Model đã được kiểm tra mở và suy luận CPU trên ảnh tổng hợp; kiểm tra này xác nhận file chạy được, không đo độ chính xác.
+
+Chép model chưa tự tích hợp vào ROS 2 hoặc xe thật. Nếu sau này export ONNX, cần kiểm tra output và bộ chạy tương ứng trước khi sử dụng. Các trọng số khác vẫn bị ignore để tránh vô tình phát hành model cũ.
+
+Giấy phép repo không thay thế điều kiện sử dụng Ultralytics, checkpoint nền hoặc dữ liệu huấn luyện. Khi phát hành phiên bản mới, cập nhật SHA256, metadata và kết quả riêng cho phiên bản đó.
