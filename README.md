@@ -37,7 +37,7 @@ Có thể truyền `--weights /duong/dan/best_real.pt` và `--no-show`. Các ch�
 | `training/` | Notebook train pilot trên Colab |
 | `docs/` | Thuật toán, kiến trúc, kết quả và nội dung báo cáo |
 | `models/` | Trọng số pilot best.pt qua Git LFS, metadata và hướng dẫn |
-| `data/` | Mô tả dataset, không chứa ảnh huấn luyện |
+| `data/` | ZIP dataset pilot qua Git LFS và báo cáo hợp nhất |
 | `hardware/` | Nhóm bổ sung linh kiện và sơ đồ xe thật |
 | `media/` | Nhóm bổ sung ảnh/video xe thật |
 | `simulation/` | Toàn bộ code, tài liệu và media Gazebo |
@@ -54,4 +54,4 @@ python tests/test_fusion.py
 
 ## Giấy phép và tài nguyên ngoài
 
-Mã của dự án theo [LICENSE](LICENSE). Thành phần mô phỏng giữ [giấy phép riêng](simulation/LICENSE). Thư viện Ultralytics có điều kiện cấp phép riêng; giấy phép repo không thay thế giấy phép thư viện, model hoặc dữ liệu nguồn. Trọng số pilot đã phát hành qua Git LFS. Dataset và thông tin phần cứng chưa được phát hành. Xem [danh mục bàn giao](docs/DELIVERY.md) để biết phần đã có và phần nhóm cần bổ sung.
+Mã của dự án theo [LICENSE](LICENSE). Thành phần mô phỏng giữ [giấy phép riêng](simulation/LICENSE). Thư viện Ultralytics có điều kiện cấp phép riêng; giấy phép repo không thay thế giấy phép thư viện, model hoặc dữ liệu nguồn. Trọng số pilot đã phát hành qua Git LFS. ZIP dataset pilot cũng đã phát hành qua Git LFS; thông tin phần cứng do nhóm bổ sung. Xem [danh mục bàn giao](docs/DELIVERY.md) để biết phần đã có và phần nhóm cần bổ sung.

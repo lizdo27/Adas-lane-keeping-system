@@ -246,3 +246,6 @@ outputs/
 
 # Published pilot checkpoint; other local weights stay ignored
 !/models/best.pt
+
+# Published training dataset
+!/data/ADAS_REAL_MERGED.zip

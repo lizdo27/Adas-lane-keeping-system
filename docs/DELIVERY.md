@@ -14,7 +14,7 @@ Cập nhật 06/11/2026. Dự án chính là xe thật; toàn bộ tài nguyên 
 | Mô phỏng, ảnh/video Gazebo | simulation/ | Đã có; tách khỏi dữ liệu xe thật |
 | Linh kiện và sơ đồ xe thật | hardware/ | Nhóm tự bổ sung theo phần cứng thực tế |
 | Ảnh/video xe thật để báo cáo | media/ | Nhóm chọn và bổ sung |
-| Dataset huấn luyện | Kho riêng của nhóm | Chưa công khai do quyền nguồn dữ liệu |
+| Dataset huấn luyện | data/ADAS_REAL_MERGED.zip | ZIP pilot nguyên bản, phát hành qua Git LFS |
 | ROS 2 và firmware xe thật | Chưa triển khai | Không có code để công bố là đã hoàn tất |
 
 Không đưa lên repo các môi trường .venv, thư mục build/install/log, cache, dataset ZIP riêng, token hoặc output thử nghiệm dung lượng lớn. Code nhận diện giữ khả năng tạo lại video so sánh từ video gốc và model.

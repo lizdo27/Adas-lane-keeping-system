@@ -1,6 +1,18 @@
 # Dữ liệu xe thật — bản pilot
 
-Dataset và ảnh chưa được phát hành trong repository. ZIP dùng để train là `ADAS_REAL_MERGED.zip`; giữ bản gốc trong kho riêng của nhóm. Một số nguồn có điều kiện sử dụng riêng, cần kiểm tra quyền trước khi công khai.
+ZIP đã dùng train: **[ADAS_REAL_MERGED.zip](ADAS_REAL_MERGED.zip)**, phát hành bằng Git LFS theo yêu cầu của nhóm. File giữ nguyên byte so với bản pilot đã hợp nhất, dung lượng 57.131.033 byte (khoảng 54,5 MiB).
+
+Tải repo bằng Git rồi chạy:
+
+```bash
+git lfs install
+git lfs pull --include="data/ADAS_REAL_MERGED.zip"
+sha256sum data/ADAS_REAL_MERGED.zip
+```
+
+SHA256 phải khớp `dataset_zip_sha256` trong [merge_report.json](merge_report.json). Nếu file chỉ vài trăm byte thì đó là pointer LFS, chưa phải ZIP thật. Upload ZIP tải được vào gốc My Drive để chạy [notebook Colab](../training/Train_ADAS_REAL.ipynb).
+
+ZIP gồm ảnh, polygon nhãn, data.yaml, manifest.json và báo cáo hợp nhất. Giữ nguyên các lưu ý nguồn dữ liệu trong ZIP; giấy phép mã nguồn của repo không tự cấp lại giấy phép cho dữ liệu.
 
 Hai class sau hợp nhất: `0: lane_marking`, `1: crosswalk`. Vạch trái/phải dùng chung lớp; chọn hai biên phù hợp là nhiệm vụ hậu xử lý, không mặc định chỉ có hai instance trong ảnh.
 
@@ -22,4 +34,4 @@ Crosswalk còn lẫn polygon từng thanh với polygon cả vùng. Nhóm chấp
 
 Phiên bản tiếp theo nên thống nhất quy tắc crosswalk, duyệt nhãn và tăng ảnh test từ buổi quay độc lập. Để tái lập cần giữ ZIP, `manifest.json`, `merge_report.json`, danh sách loại và SHA256 cùng bản model.
 
-Báo cáo máy đọc được và SHA256 của ZIP pilot: [merge_report.json](merge_report.json). Không đính kèm ảnh hoặc manifest đường dẫn ảnh riêng.
+Báo cáo máy đọc được và SHA256 của ZIP pilot: [merge_report.json](merge_report.json). Ảnh và manifest nằm trong ZIP; không giải nén chúng vào lịch sử Git.

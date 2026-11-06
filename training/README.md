@@ -1,6 +1,6 @@
 # Huấn luyện YOLOv8n-seg trên Colab
 
-Mở [Train_ADAS_REAL.ipynb](Train_ADAS_REAL.ipynb) trong Colab. Upload `ADAS_REAL_MERGED.zip` vào gốc My Drive, bật T4 GPU và chạy các cell theo thứ tự.
+Mở [Train_ADAS_REAL.ipynb](Train_ADAS_REAL.ipynb) trong Colab. Tải [ADAS_REAL_MERGED.zip](../data/ADAS_REAL_MERGED.zip) qua Git LFS theo [hướng dẫn](../data/README.md). Upload `ADAS_REAL_MERGED.zip` vào gốc My Drive, bật T4 GPU và chạy các cell theo thứ tự.
 
 Notebook kiểm tra class/split/nhãn, train, lưu checkpoint lên Drive, đánh giá test và tải best.pt. Nó yêu cầu ZIP đã hợp nhất có `data.yaml`, `manifest.json`, `merge_report.json`, `train/`, `valid/`, `test/`; không dùng trực tiếp cho một ZIP Roboflow bất kỳ.
 
